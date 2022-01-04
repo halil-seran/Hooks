@@ -34,7 +34,7 @@ const UseMemoHook = () => {
             <TextInput
                 style={styles.input}
                 value={number}
-                onChange={e => setNumber(parseInt(e.target.value))}
+                onChangeText={number => setNumber(parseInt(number))}
             />
             <Button title='change' onPress={() => setColor(prevColor => !prevColor)} />
             <View style={themeStyles}>

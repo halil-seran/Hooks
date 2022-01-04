@@ -11,7 +11,7 @@ const UseEffectHook = () => {
         fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
             .then(response => response.json())
             .then(json => setItems(json))
-    }, [resourceType])                               //bu arrayde ki her eleman degistiginde use effect calisir
+    }, [resourceType])                               //bu arrayde ki elemanlardan herhangi biri degistiginde use effect calisir
 
 
     return (
@@ -45,7 +45,7 @@ useEffect(() => {
     return () => {                  //once return u calistiriyor sonra change yazana console logu
         console.log('return from resource Change')   //bunu temizlemek icin kullanabiliriz onceki datayi silebiliriz degistirebiliriz
     }
-}, [resourceType])
+}, [resourceType])      //bu arraydeki tek bir elemanin degismesi useEffectin calismasi icin yeterlidir
 
 
 
